@@ -4,12 +4,14 @@
   "description": "The web server for gesture controlled wheelchair",
   "main": "server.js",
   "scripts": {
-    "test": "node server.js"
+    "test": "nodemon server.js"
   },
   "author": "Sparsha Saha",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
     "nodemon": "^1.18.8"
   }
 }
