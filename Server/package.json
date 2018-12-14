@@ -2,7 +2,7 @@
   "name": "wheelchair_server",
   "version": "1.0.0",
   "description": "The web server for gesture controlled wheelchair",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "node server.js"
   },
