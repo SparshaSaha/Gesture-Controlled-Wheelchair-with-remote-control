@@ -4,7 +4,7 @@
   "description": "The web server for gesture controlled wheelchair",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node server.js"
   },
   "author": "Sparsha Saha",
   "license": "ISC",
