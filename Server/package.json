@@ -9,7 +9,10 @@
   "author": "Sparsha Saha",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "moment": "^2.23.0",
+    "mongodb": "^3.1.10",
+    "mongoose": "^5.4.0"
   },
   "devDependencies": {
     "nodemon": "^1.18.8"
