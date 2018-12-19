@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+require('mongoose-double')(mongoose);
 var SchemaTypes = mongoose.Schema.Types;
 
 var locationSchema = new mongoose.Schema({
@@ -8,4 +9,4 @@ var locationSchema = new mongoose.Schema({
     timeStamp: {type:String, required: true}
 });
 
-module.exports = mongoose.model('location', locationSchema);
+module.exports = mongoose.model('Location', locationSchema);
