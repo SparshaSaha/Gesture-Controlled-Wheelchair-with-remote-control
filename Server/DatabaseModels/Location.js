@@ -3,6 +3,7 @@ require('mongoose-double')(mongoose);
 var SchemaTypes = mongoose.Schema.Types;
 
 var locationSchema = new mongoose.Schema({
+    id: {type: Number, required:true},
     latitude: {type: SchemaTypes.Double, required: true},
     longitude: {type: SchemaTypes.Double, required: true},
     accuracy: {type: SchemaTypes.Double},
