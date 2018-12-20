@@ -14,6 +14,7 @@ module.exports = {
                     
                     // If database has no previous save location object
                     var wheelChairLocation = new Location({
+                        id: 1,
                         latitude: 14.335,
                         longitude: 15.667,
                         timeStamp: 'RandomTime'
@@ -25,7 +26,9 @@ module.exports = {
                         }
                     });
                 } else {
-                    // Update
+                    // Update the database
+
+
                 }
             }
 
