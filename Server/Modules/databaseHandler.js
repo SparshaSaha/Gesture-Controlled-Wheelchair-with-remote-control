@@ -27,16 +27,17 @@ module.exports = {
                             console.log("Saved");
                         }
                     });
+
                 } else {
                     
                     // Update the database
-                     Location.updateOne({l_id: 1}, {$set: {latitude: location.latitude, longitude: location.longitude}}, (err, response)=> {
+                    Location.updateOne({l_id: 1}, {$set: {latitude: location.latitude, longitude: location.longitude}}, (err, response)=> {
                         if (!err) {
                             console.log("Successful");
                         } else {
                             console.log("Unsuccessful");
                         }
-                     });
+                    });
                 }
             }
         });
