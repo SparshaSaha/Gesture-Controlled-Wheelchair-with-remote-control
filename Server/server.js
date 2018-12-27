@@ -2,7 +2,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
-const port = 8010;
+const port = 3000;
 const databaseHandler = require('./Modules/databaseHandler.js');
 
 // Create Database Instance and connect to database
@@ -16,6 +16,6 @@ var loc = {
     latitude: 1.11,
     longitude: 2.33
 };
-databaseHandler.insertOrUpdateLocation(loc); 
 
+databaseHandler.insertOrUpdateLocation(loc); 
 app.listen(port);
