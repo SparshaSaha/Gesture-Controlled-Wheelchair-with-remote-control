@@ -4,7 +4,7 @@ const moment = require('moment');
 
 module.exports = {
 
-    insertOrUpdateLocation: function(location) {
+    insertOrUpdateLocation: function(location, utcString) {
 
         // Check if a previous location object is present
         Location.find({}, (error, response) => {
@@ -19,7 +19,7 @@ module.exports = {
                         l_id: 1,
                         latitude: 14.335,
                         longitude: 15.667,
-                        timeStamp: moment.utc().toDate().toUTCString()
+                        timeStamp: utcString
                     });
 
                     wheelChairLocation.save((err, resp) => {
