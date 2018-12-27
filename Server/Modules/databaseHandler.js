@@ -1,6 +1,5 @@
 "use strict"
 const Location = require('./../DatabaseModels/Location');
-const moment = require('moment');
 
 module.exports = {
 
