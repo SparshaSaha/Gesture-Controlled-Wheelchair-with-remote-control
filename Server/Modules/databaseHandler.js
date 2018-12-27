@@ -28,8 +28,9 @@ module.exports = {
                         }
                     });
                 } else {
+                    
                     // Update the database
-                     Location.update({l_id: 1}, {$set: {latitude: location.latitude, longitude: location.longitude}}, (err, response)=> {
+                     Location.updateOne({l_id: 1}, {$set: {latitude: location.latitude, longitude: location.longitude}}, (err, response)=> {
                         if (!err) {
                             console.log("Successful");
                         } else {
@@ -38,7 +39,6 @@ module.exports = {
                      });
                 }
             }
-
         });
     }
 };
