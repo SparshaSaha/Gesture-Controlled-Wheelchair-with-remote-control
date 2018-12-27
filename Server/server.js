@@ -2,6 +2,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
+const moment = require("moment");
 const port = 3000;
 const databaseHandler = require('./Modules/databaseHandler.js');
 
@@ -16,6 +17,5 @@ var loc = {
     latitude: 1.11,
     longitude: 2.33
 };
-
-databaseHandler.insertOrUpdateLocation(loc); 
+databaseHandler.insertOrUpdateLocation(loc, moment().toString()); 
 app.listen(port);
