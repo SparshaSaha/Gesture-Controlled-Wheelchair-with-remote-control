@@ -12,5 +12,10 @@ var database = mongoose.connection.openUri('mongodb://127.0.0.1:27017/WheelChair
 mongoose.connection.once('connected', function() {
     console.log("Connected to Database");
 });
+var loc = {
+    latitude: 1.11,
+    longitude: 2.33
+};
+databaseHandler.insertOrUpdateLocation(loc); 
 
 app.listen(port);
