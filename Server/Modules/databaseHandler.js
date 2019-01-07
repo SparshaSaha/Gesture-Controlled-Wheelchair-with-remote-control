@@ -1,6 +1,6 @@
 "use strict"
 const Location = require('./../DatabaseModels/Location');
-
+ 
 module.exports = {
 
     insertOrUpdateLocation: function(location, utcString) {
