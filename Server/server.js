@@ -3,7 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 const moment = require("moment");
-const port = 3000;
+const port = process.env.PORT || 3000;
 const databaseHandler = require('./Modules/databaseHandler.js');
 
 // Create Database Instance and connect to database
@@ -17,5 +17,5 @@ var loc = {
     latitude: 1.11,
     longitude: 2.33
 };
-databaseHandler.insertOrUpdateLocation(loc, moment().toString()); 
+databaseHandler.insertOrUpdateLocation(loc, moment().toString());
 app.listen(port);
