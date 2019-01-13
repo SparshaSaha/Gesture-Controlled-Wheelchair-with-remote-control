@@ -15,7 +15,8 @@ mongoose.connection.once('connected', function() {
 });
 var loc = {
     latitude: 1.11,
-    longitude: 2.33
+    longitude: 2.33,
+    timeStamp: Date.now()
 };
 databaseHandler.insertOrUpdateLocation(loc, moment().toString());
 app.listen(port);
