@@ -16,13 +16,13 @@ module.exports = {
                     // If database has no previous save location object
                     var wheelChairLocation = new Location({
                         l_id: 1,
-                        latitude: 14.335,
-                        longitude: 15.667,
-                        timeStamp: utcString
+                        latitude: null,
+                        longitude: null,
+                        timeStamp: Date.now()
                     });
 
                     wheelChairLocation.save((err, resp) => {
-                        if(!err) {
+                        if (!err) {
                             console.log("Saved");
                         }
                     });
@@ -30,7 +30,7 @@ module.exports = {
                 } else {
                     
                     // Update the database
-                    Location.updateOne({l_id: 1}, {$set: {latitude: location.latitude, longitude: location.longitude}}, (err, response)=> {
+                    Location.updateOne({l_id: 1}, {$set: {latitude: location.latitude, longitude: location.longitude, timeStamp: location.timeStamp}}, (err, response)=> {
                         if (!err) {
                             console.log("Successful");
                         } else {
