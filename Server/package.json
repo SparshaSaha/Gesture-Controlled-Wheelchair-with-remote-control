@@ -12,7 +12,8 @@
     "express": "^4.16.4",
     "moment": "^2.23.0",
     "mongodb": "^3.1.10",
-    "mongoose": "^5.4.0"
+    "mongoose": "^5.4.0",
+    "mongoose-double": "0.0.1"
   },
   "devDependencies": {
     "nodemon": "^1.18.8"
