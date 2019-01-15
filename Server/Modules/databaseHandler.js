@@ -5,11 +5,10 @@ module.exports = {
 
     insertOrUpdateLocation: function(location, utcString) {
 
-        // Check if a previous location object is present
+        // Check if a previous location object is present, that is, if the database is empty
         Location.find({}, (error, response) => {
 
             if (!error) {
-                console.log(response);
 
                 if (response.length == 0) {
                     
@@ -20,7 +19,8 @@ module.exports = {
                         longitude: null,
                         timeStamp: Date.now()
                     });
-
+                    
+                    // Initializiing the Location object
                     wheelChairLocation.save((err, resp) => {
                         if (!err) {
                             console.log("Saved");
@@ -29,7 +29,7 @@ module.exports = {
 
                 } else {
                     
-                    // Update the database
+                    // Update the database as location object is already present
                     Location.updateOne({l_id: 1}, {$set: {latitude: location.latitude, longitude: location.longitude, timeStamp: location.timeStamp}}, (err, response)=> {
                         if (!err) {
                             console.log("Successful");

@@ -13,10 +13,14 @@ var database = mongoose.connection.openUri('mongodb://127.0.0.1:27017/WheelChair
 mongoose.connection.once('connected', function() {
     console.log("Connected to Database");
 });
+
+/* The following is an example to show how we can use the databaseHandler to seamlessly update the database
 var loc = {
     latitude: 1.11,
     longitude: 2.33,
     timeStamp: Date.now()
 };
 databaseHandler.insertOrUpdateLocation(loc, moment().toString());
+*/
+
 app.listen(port);
