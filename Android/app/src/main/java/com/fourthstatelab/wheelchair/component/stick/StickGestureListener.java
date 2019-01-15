@@ -46,6 +46,11 @@ public class StickGestureListener extends GestureDetector.SimpleOnGestureListene
         return true;
     }
 
+    @Override
+    public boolean onDown(MotionEvent e) {
+        return true;
+    }
+
     /**
      * Creates Touch listener from GestureListener which is to be attached to view
      * @param context
