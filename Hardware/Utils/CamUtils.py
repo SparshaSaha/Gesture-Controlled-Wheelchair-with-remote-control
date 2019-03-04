@@ -14,10 +14,10 @@ class WebCamUsingPhone(threading.Thread):
 
   def run(self):
     while True:
-      imgRes = urlopen(self.url)
-      imgNp = np.array(bytearray(imgRes.read()), dtype=np.uint8)
-      img = cv2.imdecode(imgNp, -1)
-      cv2.imshow('test', img)
+      capturedFrame = urlopen(self.url)
+      frameAsArray = np.array(bytearray(capturedFrame.read()), dtype=np.uint8)
+      decodedImage = cv2.imdecode(frameAsArray, -1)
+      cv2.imshow(self.name, decodedImage)
       # Export through socket
       if ord('q') == cv2.waitKey(10):
         exit(0)
