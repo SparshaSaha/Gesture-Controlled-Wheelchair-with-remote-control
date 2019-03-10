@@ -37,9 +37,9 @@ public class Stick extends FrameLayout {
     /**
      * View initialization
      */
-    private void init(){
+    private void init() {
         rootView = View.inflate(getContext(), R.layout.pan_view, null);
-        stickView = (ImageView)rootView.findViewById(R.id.stick_view);
+        stickView = (ImageView) rootView.findViewById(R.id.stick_view);
         addView(rootView);
         this.post(new Runnable() {
             @Override

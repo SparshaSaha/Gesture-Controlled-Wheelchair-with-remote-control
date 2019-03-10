@@ -41,8 +41,8 @@ public class StickGestureListener extends GestureDetector.SimpleOnGestureListene
     /**
      * Handles panning of the view
      *
-     * @param e1 Events
-     * @param e2 Events
+     * @param e1        Events
+     * @param e2        Events
      * @param distanceX delta in X Axis
      * @param distanceY delta in Y Axis
      * @return boolean, if the event is handled or not (always true as handled)
@@ -54,7 +54,7 @@ public class StickGestureListener extends GestureDetector.SimpleOnGestureListene
         float newCenterY = view.getY() - distanceY + halfHeight;
         float distanceFromCenter = getDistance(centerX, centerY, newCenterX, newCenterY);
 
-        if(distanceFromCenter < boundRadius) {
+        if (distanceFromCenter < boundRadius) {
             params.leftMargin -= distanceX;
             params.topMargin -= distanceY;
         }
