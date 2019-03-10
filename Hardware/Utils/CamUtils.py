@@ -2,7 +2,6 @@ import cv2
 import numpy as np
 from urllib.request import urlopen
 import threading
-import time
 
 class WebCamUsingPhone(threading.Thread):
   
@@ -24,12 +23,6 @@ class WebCamUsingPhone(threading.Thread):
         print('Exception occured....exiting')
         exit(0)
         
-      # Export through socket
-      if ord('q') == cv2.waitKey(10):
-        exit(0)
+      # Export through socket code here
+      
     exit(0)
-
-stopper = threading.Event()
-threadTest = WebCamUsingPhone(1, 'left', "http://10.105.17.33:8080/shot.jpg", stopper)
-threadTest.start()
-
