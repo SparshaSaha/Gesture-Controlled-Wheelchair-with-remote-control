@@ -6,7 +6,6 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
-
 public class StickGestureListener extends GestureDetector.SimpleOnGestureListener {
 
     private View view;
@@ -88,7 +87,7 @@ public class StickGestureListener extends GestureDetector.SimpleOnGestureListene
 
     /**
      * Gets distance between 2 points (x1, y1) and (x2, y2)
-     * 
+     *
      * @param x1 x coordinate of point 1
      * @param y1 y coordinate of point 1
      * @param x2 x coordinate of point 2

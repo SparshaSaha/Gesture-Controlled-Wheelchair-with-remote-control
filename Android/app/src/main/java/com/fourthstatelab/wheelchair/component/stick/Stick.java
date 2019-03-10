@@ -1,10 +1,8 @@
 package com.fourthstatelab.wheelchair.component.stick;
 
 import android.content.Context;
-import android.media.Image;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
