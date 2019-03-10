@@ -6,16 +6,16 @@
     tools:ignore="MissingDefaultResource">
 
     <RelativeLayout
-        android:gravity="center"
-        android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:background="@drawable/circle_stroke">
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_stroke"
+        android:gravity="center">
 
-    <ImageView
-        android:id="@+id/stick_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/stick"/>
+        <ImageView
+            android:id="@+id/stick_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/stick" />
     </RelativeLayout>
 
 </RelativeLayout>
