@@ -27,8 +27,7 @@ class WebCamUsingPhone(threading.Thread):
       # Export through socket
       if ord('q') == cv2.waitKey(10):
         exit(0)
-        
-      exit(0)
+    exit(0)
 
 stopper = threading.Event()
 threadTest = WebCamUsingPhone(1, 'left', "http://10.105.17.33:8080/shot.jpg", stopper)
