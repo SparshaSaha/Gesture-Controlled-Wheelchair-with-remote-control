@@ -15,7 +15,7 @@ class SocketReadUtils(threading.Thread):
             return True
         return False
 
-    def triggerCallBacks(self, triggerString):
+    def triggerCallBack(self, triggerString):
         if triggerString not in self.callbacks:
             return False
 
@@ -25,6 +25,6 @@ class SocketReadUtils(threading.Thread):
     def run(self):
         while True:
             data = self.socket.recv()
-            if self.triggerCallBacks(data):
+            if self.triggerCallBack(data):
                 print("Successfully")
         
