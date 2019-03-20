@@ -23,5 +23,8 @@ class SocketReadUtils(threading.Thread):
         return True
     
     def run(self):
-        pass
+        while True:
+            data = self.socket.recv()
+            if self.triggerCallBacks(data):
+                print("Successfully")
         
