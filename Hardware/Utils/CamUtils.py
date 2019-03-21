@@ -26,3 +26,4 @@ class WebCamUsingPhone(threading.Thread):
       # Export through socket code here
       
     exit(0)
+    

@@ -26,3 +26,4 @@ while True:
    d = input()
    c.send(d.encode('utf-8'))
    print("Sent")
+   
