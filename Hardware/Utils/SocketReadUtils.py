@@ -10,7 +10,7 @@ class SocketReadUtils(threading.Thread):
         self.stopper = stopper
 
     def registerCallback(self, registrationObject):
-        if registrationObject.getArgument in self.callbacks:
+        if registrationObject.getArgument not in self.callbacks:
             self.callbacks[registrationObject.getArgument()] = registrationObject.getFunction()
             return True
         return False
@@ -24,7 +24,7 @@ class SocketReadUtils(threading.Thread):
     
     def run(self):
         while True:
-            data = self.socket.recv()
+            data = self.socket.recv(1024).decode('utf-8')
             if self.triggerCallBack(data):
                 print("Successfully")
         

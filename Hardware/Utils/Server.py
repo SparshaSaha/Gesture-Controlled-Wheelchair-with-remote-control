@@ -5,7 +5,7 @@ s = socket.socket()
 print("Socket created")
   
 # reserve a port on your computer in our 
-port = 2001              
+port = 2002              
 
 s.bind(('', port))
 print("Bound to port")
@@ -25,3 +25,4 @@ while True:
    # send a thank you message to the client.
    d = input()
    c.send(d.encode('utf-8'))
+   print("Sent")

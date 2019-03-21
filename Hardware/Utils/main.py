@@ -11,7 +11,7 @@ def call2():
 
 def main():
     soc = socket.socket()
-    soc.connect(('127.0.0.1', 2001))
+    soc.connect(('127.0.0.1', 2002))
     x = SocketReadUtils(soc, 'reader', threading.Event())
     x.registerCallback(CallBackHandler('a', call1))
     x.registerCallback(CallBackHandler('b', call2))
