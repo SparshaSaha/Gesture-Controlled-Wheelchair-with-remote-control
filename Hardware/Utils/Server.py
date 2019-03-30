@@ -1,8 +1,9 @@
-import socket                
+import socket
+import json              
   
 s = socket.socket()
 print("Socketcreated")
-port = 2002              
+port = 2000             
 
 s.bind(('', port))
 print("Bound to port")
@@ -14,7 +15,6 @@ c, addr = s.accept()
 print("Got connection")
    
 while True:
-   d = input()
-   c.send(d.encode('utf-8'))
-   print("Sent")
-   
+   data = c.recv(1024).decode('utf-8')
+   lis = json.loads(data)
+   print(lis[0])
