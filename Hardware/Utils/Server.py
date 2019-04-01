@@ -1,9 +1,10 @@
 import socket
-import json              
+import json
+import config    
   
 s = socket.socket()
 print("Socketcreated")
-port = 2000             
+port = config.networkConfig['port']           
 
 s.bind(('', port))
 print("Bound to port")
