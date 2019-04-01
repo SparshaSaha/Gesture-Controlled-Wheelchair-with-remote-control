@@ -1,8 +1,9 @@
 import socket                
-  
+import config
+
 s = socket.socket()
 print("Socketcreated")
-port = 2002              
+port = config.networkConfig['port']              
 
 s.bind(('', port))
 print("Bound to port")
