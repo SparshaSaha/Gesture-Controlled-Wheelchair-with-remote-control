@@ -27,4 +27,4 @@ class SocketReadUtils(threading.Thread):
             data = self.socket.recv(1024).decode('utf-8')
             if self.triggerCallBack(data):
                 print("Successfully")
-        
+      

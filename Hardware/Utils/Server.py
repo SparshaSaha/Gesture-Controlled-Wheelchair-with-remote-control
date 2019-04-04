@@ -1,5 +1,7 @@
+import socket
+import json
+import config            
 import socket                
-import config
 
 s = socket.socket()
 print("Socketcreated")
@@ -15,7 +17,6 @@ c, addr = s.accept()
 print("Got connection")
    
 while True:
-   d = input()
-   c.send(d.encode('utf-8'))
-   print("Sent")
-   
+   data = c.recv(1024).decode('utf-8')
+   lis = json.loads(data)
+   print(lis[0])
